@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated with JReleaser 0.10.0 at 2021-12-29T13:16:17.546218209Z -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- required -->
+    <id>mcs</id>
+    <version>0.1.17</version>
+    <authors>Maarten Mulders</authors>
+    <description>Use Maven Central Repository Search from your command line!</description>
+    <!-- optional -->
+    <title>mcs</title>
+    <projectUrl>https://github.com/mthmulders/mcs</projectUrl>
+    <copyright>2021 Maarten Mulders</copyright>
+    <licenseUrl>https://github.com/mthmulders/mcs/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags></tags>
+    <summary>Maven Central Search</summary>
+    <projectSourceUrl>https://github.com/mthmulders/mcs</projectSourceUrl>
+    <packageSourceUrl>https://github.com/mthmulders/chocolatey-bucket</packageSourceUrl>
+    <docsUrl>https://github.com/mthmulders/mcs</docsUrl>
+    <bugTrackerUrl>https://github.com/mthmulders/mcs/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/mthmulders/mcs/releases/tag/v0.1.17</releaseNotes>
+    
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
