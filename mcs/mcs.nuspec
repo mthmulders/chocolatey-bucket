@@ -14,7 +14,7 @@
     <copyright>2021 Maarten Mulders</copyright>
     <licenseUrl>https://github.com/mthmulders/mcs/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags></tags>
+    <tags>maven development</tags>
     <summary>Maven Central Search</summary>
     <projectSourceUrl>https://github.com/mthmulders/mcs</projectSourceUrl>
     <packageSourceUrl>https://github.com/mthmulders/chocolatey-bucket</packageSourceUrl>
