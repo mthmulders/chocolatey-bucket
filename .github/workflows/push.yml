@@ -1,29 +1,35 @@
-name: Push
+name: Push-mcs
 
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
+    branches-ignore:
+      - '**'
 
 jobs:
   push:
     runs-on: windows-latest
     
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2.204'
-          
-      - name: Pack
-        run: |
-          powershell
-          choco pack mcs/mcs.nuspec
-          
-      - name: Publish
-        run: |
-          powershell
-          choco apikey -k ${{ secrets.CHOCOLATEY_API_KEY  }} -source https://push.chocolatey.org/
-          choco push $(ls *.nupkg | % {$_.FullName}) -s https://push.chocolatey.org/
 
+      - name: Find package
+        shell: bash
+        run: |
+          echo "PACKAGE_NAME=$(ls mcs/*.nuspec)" >> $GITHUB_ENV
+
+      - name: Pack
+        shell: powershell
+        run: |
+          choco pack ${{ env.PACKAGE_NAME }}
+
+      - name: Publish
+        shell: powershell
+        run: |
+          choco apikey -k ${{ secrets.CHOCOLATEY_API_KEY }} -s https://push.chocolatey.org/
+          choco push $(ls *.nupkg | % {$_.FullName}) -s https://push.chocolatey.org/
