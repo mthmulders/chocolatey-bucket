@@ -1,4 +1,4 @@
-name: Trigger
+name: Trigger-mcs
 
 on:
   workflow_dispatch:
@@ -8,19 +8,24 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2.204'
-          
+
+      - name: Find package
+        shell: bash
+        run: |
+          echo "PACKAGE_NAME=$(ls mcs/*.nuspec)" >> $GITHUB_ENV
+
       - name: Pack
+        shell: powershell
         run: |
-          powershell
-          choco pack mcs/mcs.nuspec
-          
+          choco pack ${{ env.PACKAGE_NAME }}
+
       - name: Publish
+        shell: powershell
         run: |
-          powershell
-          choco apikey -k ${{ secrets.CHOCOLATEY_API_KEY  }} -source https://push.chocolatey.org/
+          choco apikey -k ${{ secrets.CHOCOLATEY_API_KEY }} -s https://push.chocolatey.org/
           choco push $(ls *.nupkg | % {$_.FullName}) -s https://push.chocolatey.org/
