@@ -21,6 +21,7 @@
     <docsUrl>https://maarten.mulders.it/projects/mcs/</docsUrl>
     <bugTrackerUrl>https://github.com/mthmulders/mcs/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/mthmulders/mcs/releases/tag/v0.3.3</releaseNotes>
+    <iconUrl>https://maarten.mulders.it/img/mcs-icon.png</iconUrl>
     
   </metadata>
   <files>
