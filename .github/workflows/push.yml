@@ -1,4 +1,4 @@
-name: Push-mcs
+name: Push-mcs-executable
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Find package
         shell: bash
         run: |
-          echo "PACKAGE_NAME=$(ls mcs/*.nuspec)" >> $GITHUB_ENV
+          echo "PACKAGE_NAME=$(ls mcs-executable/*.nuspec)" >> $GITHUB_ENV
 
       - name: Pack
         shell: powershell

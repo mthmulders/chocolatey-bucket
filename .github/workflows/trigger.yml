@@ -1,4 +1,4 @@
-name: Trigger-mcs
+name: Trigger-mcs-executable
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
       - name: Find package
         shell: bash
         run: |
-          echo "PACKAGE_NAME=$(ls mcs/*.nuspec)" >> $GITHUB_ENV
+          echo "PACKAGE_NAME=$(ls mcs-executable/*.nuspec)" >> $GITHUB_ENV
 
       - name: Pack
         shell: powershell
