@@ -1,10 +1,10 @@
-# Generated with JReleaser 1.20.0 at 2025-11-17T09:39:50.846223+01:00
+# Generated with JReleaser 1.21.0 at 2025-11-18T12:06:57.608144+01:00
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
 
 Install-ChocolateyZipPackage `
     -PackageName 'mcs' `
-    -Url 'https://github.com/mthmulders/mcs/releases/download/v0.9.2-rc-10/mcs-0.9.2-rc-10-windows-x86_64.zip' `
-    -Checksum '25774a9b2233bee969567e04108bee16564d0c139c5c596f61a4f518733e19bc' `
+    -Url 'https://github.com/mthmulders/mcs/releases/download/v0.9.2/mcs-0.9.2-windows-x86_64.zip' `
+    -Checksum '072ce491309f75399cbaa3a1b306420d0c3a5456f738a43cc6252849b09cbb61' `
     -ChecksumType 'sha256' `
     -UnzipLocation $package
