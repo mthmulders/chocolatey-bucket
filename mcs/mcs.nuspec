@@ -5,7 +5,7 @@
   <metadata>
     <!-- required -->
     <id>mcs</id>
-    <version>0.10.0</version>
+    <version>0.10.1</version>
     <authors>Maarten Mulders</authors>
     <description>Search Maven Central from your command line!</description>
     <!-- optional -->
@@ -20,7 +20,7 @@
     <packageSourceUrl>https://github.com/mthmulders/chocolatey-bucket</packageSourceUrl>
     <docsUrl>https://maarten.mulders.it/projects/mcs/</docsUrl>
     <bugTrackerUrl>https://github.com/mthmulders/mcs/issues</bugTrackerUrl>
-    <releaseNotes>https://github.com/mthmulders/mcs/releases/tag/v0.10.0</releaseNotes>
+    <releaseNotes>https://github.com/mthmulders/mcs/releases/tag/v0.10.1</releaseNotes>
     <iconUrl>https://maarten.mulders.it/img/mcs-icon.png</iconUrl>
   </metadata>
   <files>
