@@ -4,7 +4,7 @@ $package = Split-Path $tools
 
 Install-ChocolateyZipPackage `
     -PackageName 'mcs' `
-    -Url 'https://github.com/mthmulders/mcs/releases/download/v0.10.2/mcs-0.10.2-windows-x86_64.zip' `
-    -Checksum '8d1534047a1c2bb4523399c7dac2c45bd0c071db3714bfc9d31d77c8b856dc57' `
+    -Url 'https://github.com/mthmulders/mcs/releases/download/v0.11.0/mcs-0.11.0-windows-x86_64.zip' `
+    -Checksum '2cf8ee79f97131526c5aa3cce91de1e848c737877526673540899304209de8c7' `
     -ChecksumType 'sha256' `
     -UnzipLocation $package
